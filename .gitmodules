@@ -1,0 +1,3 @@
+[submodule "modules/LayoutComponents"]
+	path = modules/LayoutComponents
+	url = git@github.com:agentejo/LayoutComponents.git
