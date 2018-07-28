@@ -1,3 +1,9 @@
 [submodule "modules/LayoutComponents"]
 	path = modules/LayoutComponents
 	url = git@github.com:agentejo/LayoutComponents.git
+[submodule "modules/Translations"]
+	path = modules/Translations
+	url = git@gitlab.com:mangoart/cockpit-module-translations.git
+[submodule "modules/Pages"]
+	path = modules/Pages
+	url = git@gitlab.com:mangoart/cockpit-module-pages.git
