@@ -7,9 +7,6 @@
 [submodule "modules/Pages"]
 	path = modules/Pages
 	url = git@gitlab.com:mangoart/cockpit-module-pages.git
-[submodule "addons/addons/BackupAndRestore"]
-	path = addons/addons/BackupAndRestore
-	url = git@github.com:pauloamgomes/Cockpit-Backup-and-Restore.git
 [submodule "addons/BackupAndRestore"]
 	path = addons/BackupAndRestore
 	url = git@github.com:pauloamgomes/Cockpit-Backup-and-Restore.git

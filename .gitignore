@@ -17,6 +17,7 @@ package-lock.json
 /tests/*
 /node_modules
 addons/
+!addons/BackupAndRestore
 !.gitignore
 !.gitkeep
 !/storage/*/index.html
