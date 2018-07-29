@@ -10,3 +10,6 @@
 [submodule "addons/addons/BackupAndRestore"]
 	path = addons/addons/BackupAndRestore
 	url = git@github.com:pauloamgomes/Cockpit-Backup-and-Restore.git
+[submodule "addons/BackupAndRestore"]
+	path = addons/BackupAndRestore
+	url = git@github.com:pauloamgomes/Cockpit-Backup-and-Restore.git
