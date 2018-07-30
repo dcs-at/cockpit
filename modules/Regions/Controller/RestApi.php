@@ -16,10 +16,34 @@ class RestApi extends \LimeExtra\Controller {
             }
         }
 
-        $params  = $this->param("params", []);
+        $params = $this->param("params", []);
+        $region = $this->module('regions')->region($name);
         $content = $this->module("regions")->render($name, $params);
 
-        return is_null($content) ? false : $content;
+        if (!$region) {
+            return false;
+        }
+
+        $data = $region['data'];
+        $data['_id'] = $region['_id'];
+        $data['_created'] = $region['_created'];
+        $data['_modified'] = $region['_modified'];
+
+        $fields = $region['fields'];
+        $transformedFields = [];
+        foreach($fields as $field) {
+            $transformedFields[$field["name"]] = $field;
+        }
+
+        return [
+            'fields' => $transformedFields,
+            'content' => $content,
+            'entries' => [
+                $data
+            ]
+        ];
+
+        /* return is_null($content) ? false : $content; */
     }
 
     public function data($name = null) {
