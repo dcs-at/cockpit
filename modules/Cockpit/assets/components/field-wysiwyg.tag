@@ -18,7 +18,7 @@
 
                 this.value = value;
 
-                if (editor && this._field != field) {
+                if (editor /* && this._field != field */) {
                     editor.setContent(this.value || '');
                 }
             }
