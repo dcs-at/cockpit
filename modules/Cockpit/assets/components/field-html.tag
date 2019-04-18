@@ -11,14 +11,12 @@
         this._field = null;
 
         this.$updateValue = function(value, field) {
-            console.log('update value html', '::', value, '::', field);
+
             if (this.value != value) {
-                console.log('modified value', '::',this.value, '::', value );
-                console.log('field', this._field, field);
+
                 this.value = value;
 
-                if (editor  /* && this._field != field */) {
-                    console.log('editor set value', value);
+                if (editor && this._field != field) {
                     editor.editor.setValue(value || '', true);
                 }
             }

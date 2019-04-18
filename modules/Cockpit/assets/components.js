@@ -2115,14 +2115,12 @@ riot.tag2('field-html', '<textarea ref="input" class="uk-visibility-hidden" hidd
         this._field = null;
 
         this.$updateValue = function(value, field) {
-            console.log('update value html', '::', value, '::', field);
+
             if (this.value != value) {
-                console.log('modified value', '::',this.value, '::', value );
-                console.log('field', this._field, field);
+
                 this.value = value;
 
-                if (editor   ) {
-                    console.log('editor set value', value);
+                if (editor && this._field != field) {
                     editor.editor.setValue(value || '', true);
                 }
             }
@@ -3207,7 +3205,6 @@ riot.tag2('field-set', '<div> <div class="uk-alert" if="{fields && !fields.lengt
         };
 
         this.$updateValue = function(value, field) {
-            console.log('update value set', '::', value, '::', field);
 
             if (!App.Utils.isObject(value) || Array.isArray(value)) {
 
@@ -3332,8 +3329,6 @@ riot.tag2('field-text', '<input ref="input" class="uk-width-1-1" bind="{opts.bin
 
         this.$updateValue = function(value) {
 
-            console.log('update value text', '::', value);
-
             if (opts.slug) {
                 this.slug = App.Utils.sluggify(value || '');
                 this.$setValue(this.slug, false, opts.bind+'_slug');
@@ -3418,7 +3413,7 @@ riot.tag2('field-wysiwyg', '<textarea ref="input" class="uk-width-1-1" rows="5" 
 
                 this.value = value;
 
-                if (editor  ) {
+                if (editor && this._field != field) {
                     editor.setContent(this.value || '');
                 }
             }
